@@ -11,6 +11,7 @@ Ekstensi ini adalah aplikasi authenticator berbasis browser yang menggunakan alg
 - Menyalin kode ke clipboard dengan klik
 
 ## Struktur Folder
+```
 browser-authenticator/
 ├── manifest.json
 ├── src/
@@ -28,6 +29,7 @@ browser-authenticator/
 │ └── html5-qrcode.min.js # Library pemindaian QR code
 └── images/
 └── icon128.png # Ikon ekstensi
+```
 
 ## Cara Kerja
 1. Pengguna menambahkan akun dengan memasukkan nama dan kunci rahasia (base32).
