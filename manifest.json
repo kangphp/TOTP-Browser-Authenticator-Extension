@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "Browser Authenticator",
+  "version": "1.0",
+  "description": "TOTP authenticator browser extension with advanced features",
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "128": "images/icon128.png"
+    }
+  },
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "permissions": [
+    "storage",
+    "activeTab",
+    "contextMenus"
+  ],
+  "host_permissions": ["<all_urls>"],
+  "icons": {
+    "128": "images/icon128.png"
+  }
+}

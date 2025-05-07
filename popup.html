@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Browser Authenticator</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body style="width: 340px; height: 480px; overflow-y: auto;">
+  <div class="container">
+    <header>
+      <h1>Browser Authenticator</h1>
+    </header>
+    
+    <div class="code-display">
+      <div class="code" id="totpCode">------</div>
+      <div class="timer">
+        <div class="timer-progress" id="timerProgress"></div>
+      </div>
+    </div>
+    
+    <div id="accountList" class="account-list"></div>
+    
+    <div class="actions">
+      <button id="addButton" class="primary-button">Tambah Akun</button>
+      <button id="scanQRButton" class="secondary-button">Scan QR</button>
+      <button id="settingsButton" class="secondary-button">Pengaturan</button>
+    </div>
+    
+    <div id="addForm" class="form-container" style="display:none;">
+      <h2>Tambah Akun Baru</h2>
+      <input type="text" id="accountName" placeholder="Nama Akun">
+      <input type="text" id="secretKey" placeholder="Kunci Rahasia">
+      <div class="form-actions">
+        <button id="cancelButton" class="secondary-button">Batal</button>
+        <button id="saveButton" class="primary-button">Simpan</button>
+      </div>
+    </div>
+    
+    <div class="status-message" id="statusMessage"></div>
+  </div>
+  
+  <script src="libs/crypto.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

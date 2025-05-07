@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pengaturan TOTP-Authenticator</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body style="width: 340px; height: 480px; overflow-y: auto;">
+  <div class="container">
+    <header>
+      <h1>Pengaturan Authenticator</h1>
+    </header>
+    
+    <div class="form-container">
+      <div class="form-group">
+        <label for="codeLength">Panjang Kode:</label>
+        <select id="codeLength" class="form-control">
+          <option value="6">6 digit</option>
+          <option value="8">8 digit</option>
+        </select>
+      </div>
+      
+      <div class="form-group">
+        <label for="refreshPeriod">Periode Refresh:</label>
+        <select id="refreshPeriod" class="form-control">
+          <option value="30">30 detik</option>
+          <option value="60">60 detik</option>
+          <option value="90">90 detik</option>
+          <option value="120">2 menit</option>
+          <option value="300">5 menit</option>
+        </select>
+      </div>
+      
+      <div class="form-group">
+        <label for="algorithm">Algoritma HMAC:</label>
+        <select id="algorithm" class="form-control">
+          <option value="SHA-1">SHA-1</option>
+          <option value="SHA-256">SHA-256</option>
+          <option value="SHA-512">SHA-512</option>
+        </select>
+      </div>
+      
+      <div class="form-group">
+        <label>
+          <input type="checkbox" id="autoBackupToggle">
+          Backup otomatis data akun
+        </label>
+      </div>
+    </div>
+    
+    <div class="form-container">
+      <div class="form-group">
+        <h2>Ekspor/Impor Data</h2>
+        <button id="exportButton" class="primary-button" style="margin-bottom: 8px; width: 100%;">Ekspor Akun</button>
+        <button id="importButton" class="secondary-button" style="width: 100%;">Impor Akun</button>
+        <input type="file" id="importFile" style="display: none;" accept=".json">
+      </div>
+    </div>
+    
+    <div class="actions">
+      <button id="saveSettingsButton" class="primary-button">Simpan Pengaturan</button>
+      <button id="backFromSettingsButton" class="secondary-button">Kembali</button>
+    </div>
+    
+    <div class="status-message" id="statusMessage"></div>
+  </div>
+  
+  <script src="settings.js"></script>
+</body>
+</html>
