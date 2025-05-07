@@ -14,21 +14,19 @@ Ekstensi ini adalah aplikasi authenticator berbasis browser yang menggunakan alg
 ```
 browser-authenticator/
 ├── manifest.json
-├── src/
-│ ├── popup.html # Halaman utama popup ekstensi
-│ ├── popup.js # Logika utama ekstensi
-│ ├── background.js # Script background untuk pengelolaan ekstensi
-│ ├── settings.html # Halaman pengaturan ekstensi
-│ ├── settings.js # Logika pengaturan
-│ ├── qr-scan.html # Halaman pemindaian QR code
-│ └── qr-scan.js # Logika pemindaian QR code
-├── styles/
-│ └── styles.css # Styling CSS untuk semua halaman
+├── popup.html # Halaman utama popup ekstensi
+├── popup.js # Logika utama ekstensi
+├── background.js # Script background untuk pengelolaan ekstensi
+├── settings.html # Halaman pengaturan ekstensi
+├── settings.js # Logika pengaturan
+├── qr-scan.html # Halaman pemindaian QR code
+└── qr-scan.js # Logika pemindaian QR code
+├── styles.css # Styling CSS untuk semua halaman
 ├── libs/
 │ ├── crypto.js # Implementasi algoritma TOTP dan HMAC
 │ └── html5-qrcode.min.js # Library pemindaian QR code
-└── images/
-└── icon128.png # Ikon ekstensi
+│── images/
+│ └── icon128.png # Ikon ekstensi
 ```
 
 ## Cara Kerja
